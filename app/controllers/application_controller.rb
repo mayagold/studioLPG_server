@@ -33,5 +33,6 @@ class ApplicationController < ActionController::API
     puts "user id: #{get_current_user.id}"
     puts "params: #{params[:id]}"
     render json: { status: 401, message: "Unauthorized" } unless get_current_user.id = params[:id].to_i
+  end 
 
 end
